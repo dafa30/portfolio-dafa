@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-helpdesk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="primary-btn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="750" fill="url(#bg-helpdesk)" />
+
+  <!-- App Window Container -->
+  <g filter="url(#shadow)" transform="translate(60, 45)">
+    <!-- Window Border & Body -->
+    <rect width="1080" height="660" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+
+    <!-- Window Titlebar -->
+    <rect width="1080" height="48" rx="16" fill="#1e293b" />
+    <rect y="36" width="1080" height="12" fill="#1e293b" />
+    <circle cx="28" cy="24" r="6" fill="#ef4444" />
+    <circle cx="48" cy="24" r="6" fill="#f59e0b" />
+    <circle cx="68" cy="24" r="6" fill="#10b981" />
+    <text x="540" y="30" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Aplikasi Helpdesk IT — PT. Aplika Media Nusantara</text>
+
+    <!-- Sidebar -->
+    <g transform="translate(0, 48)">
+      <rect width="210" height="612" fill="#131d33" />
+      <line x1="210" y1="0" x2="210" y2="612" stroke="#334155" stroke-width="1" />
+
+      <!-- Sidebar Logo -->
+      <g transform="translate(24, 28)">
+        <rect width="32" height="32" rx="8" fill="#3b82f6" />
+        <path d="M10 16h12M16 10v12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+        <text x="44" y="22" fill="#ffffff" font-family="'Segoe UI', system-ui, sans-serif" font-size="16" font-weight="700">Helpdesk IT</text>
+      </g>
+
+      <!-- Nav Items -->
+      <g transform="translate(16, 85)">
+        <rect width="178" height="38" rx="8" fill="#3b82f6" fill-opacity="0.15" />
+        <rect width="4" height="24" rx="2" x="0" y="7" fill="#3b82f6" />
+        <text x="32" y="24" fill="#60a5fa" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600">Dashboard Tiket</text>
+      </g>
+      <g transform="translate(16, 130)">
+        <text x="32" y="24" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Tiket Masuk (24)</text>
+      </g>
+      <g transform="translate(16, 175)">
+        <text x="32" y="24" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Dalam Proses (9)</text>
+      </g>
+      <g transform="translate(16, 220)">
+        <text x="32" y="24" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Selesai / Closed</text>
+      </g>
+      <g transform="translate(16, 265)">
+        <text x="32" y="24" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Laporan & Evaluasi</text>
+      </g>
+
+      <!-- User Profile at bottom -->
+      <g transform="translate(16, 545)">
+        <rect width="178" height="48" rx="8" fill="#1e293b" />
+        <circle cx="28" cy="24" r="14" fill="#3b82f6" />
+        <text x="28" y="29" fill="#ffffff" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">IT</text>
+        <text x="50" y="21" fill="#f8fafc" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600">Dafa A. R.</text>
+        <text x="50" y="36" fill="#64748b" font-family="'Segoe UI', system-ui, sans-serif" font-size="10">IT Support Eng.</text>
+      </g>
+    </g>
+
+    <!-- Main Content Area -->
+    <g transform="translate(230, 68)">
+      <!-- Top header bar -->
+      <text x="10" y="26" fill="#f8fafc" font-family="'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="700">Pusat Pengelolaan Tiket & Permasalahan IT</text>
+      <text x="10" y="48" fill="#64748b" font-family="'Segoe UI', system-ui, sans-serif" font-size="12">Sistem pelaporan kendala infrastruktur, jaringan, dan perangkat kerja</text>
+
+      <!-- New Ticket Button -->
+      <g transform="translate(680, 10)">
+        <rect width="135" height="38" rx="8" fill="url(#primary-btn)" />
+        <text x="67" y="24" fill="#ffffff" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">+ Buat Tiket Baru</text>
+      </g>
+
+      <!-- Stat Cards Row -->
+      <g transform="translate(10, 70)">
+        <!-- Card 1 -->
+        <g>
+          <rect width="190" height="92" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <text x="18" y="32" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500">Total Tiket Bulan Ini</text>
+          <text x="18" y="68" fill="#f8fafc" font-family="'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="700">142</text>
+          <circle cx="155" cy="46" r="18" fill="#3b82f6" fill-opacity="0.2" />
+          <path d="M149 46h12M155 40v12" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" />
+        </g>
+
+        <!-- Card 2 -->
+        <g transform="translate(205, 0)">
+          <rect width="190" height="92" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <text x="18" y="32" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500">Tiket Terbuka (Open)</text>
+          <text x="18" y="68" fill="#f59e0b" font-family="'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="700">24</text>
+          <circle cx="155" cy="46" r="18" fill="#f59e0b" fill-opacity="0.2" />
+          <circle cx="155" cy="46" r="6" stroke="#f59e0b" stroke-width="2" fill="none" />
+        </g>
+
+        <!-- Card 3 -->
+        <g transform="translate(410, 0)">
+          <rect width="190" height="92" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <text x="18" y="32" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500">Sedang Ditangani</text>
+          <text x="18" y="68" fill="#38bdf8" font-family="'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="700">9</text>
+          <circle cx="155" cy="46" r="18" fill="#38bdf8" fill-opacity="0.2" />
+          <path d="M150 46l3 4 8-8" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+        </g>
+
+        <!-- Card 4 -->
+        <g transform="translate(615, 0)">
+          <rect width="190" height="92" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+          <text x="18" y="32" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="500">Terselesaikan</text>
+          <text x="18" y="68" fill="#10b981" font-family="'Segoe UI', system-ui, sans-serif" font-size="28" font-weight="700">109</text>
+          <circle cx="155" cy="46" r="18" fill="#10b981" fill-opacity="0.2" />
+          <path d="M149 46l4 4 8-8" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" />
+        </g>
+      </g>
+
+      <!-- Ticket Table Section -->
+      <g transform="translate(10, 185)">
+        <rect width="805" height="370" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+
+        <!-- Table Header -->
+        <rect width="805" height="42" rx="12" fill="#243048" />
+        <rect y="30" width="805" height="12" fill="#243048" />
+        <text x="24" y="26" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600">ID TIKET</text>
+        <text x="120" y="26" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600">SUBJEK KENDALA IT</text>
+        <text x="390" y="26" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600">PELAPOR / DIVISI</text>
+        <text x="545" y="26" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600">PRIORITAS</text>
+        <text x="690" y="26" fill="#94a3b8" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600">STATUS</text>
+
+        <!-- Row 1 -->
+        <g transform="translate(0, 52)">
+          <line x1="20" y1="46" x2="785" y2="46" stroke="#334155" stroke-width="0.8" />
+          <text x="24" y="28" fill="#60a5fa" font-family="monospace" font-size="13" font-weight="600">#TK-8092</text>
+          <text x="120" y="28" fill="#f8fafc" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Gangguan Akses Jaringan LAN Ruang Rapat</text>
+          <text x="390" y="28" fill="#cbd5e1" font-family="'Segoe UI', system-ui, sans-serif" font-size="12">Divisi Operasional</text>
+          <!-- Priority Chip: High -->
+          <rect x="545" y="12" width="62" height="24" rx="6" fill="#ef4444" fill-opacity="0.2" />
+          <text x="576" y="28" fill="#f87171" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Tinggi</text>
+          <!-- Status Chip: In Progress -->
+          <rect x="685" y="12" width="90" height="24" rx="6" fill="#0284c7" fill-opacity="0.2" />
+          <text x="730" y="28" fill="#38bdf8" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Diproses</text>
+        </g>
+
+        <!-- Row 2 -->
+        <g transform="translate(0, 110)">
+          <line x1="20" y1="46" x2="785" y2="46" stroke="#334155" stroke-width="0.8" />
+          <text x="24" y="28" fill="#60a5fa" font-family="monospace" font-size="13" font-weight="600">#TK-8089</text>
+          <text x="120" y="28" fill="#f8fafc" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Konfigurasi Email Domain & Sertifikat SSL</text>
+          <text x="390" y="28" fill="#cbd5e1" font-family="'Segoe UI', system-ui, sans-serif" font-size="12">Divisi Keuangan</text>
+          <!-- Priority Chip: Medium -->
+          <rect x="545" y="12" width="62" height="24" rx="6" fill="#f59e0b" fill-opacity="0.2" />
+          <text x="576" y="28" fill="#fbbf24" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Sedang</text>
+          <!-- Status Chip: Open -->
+          <rect x="685" y="12" width="90" height="24" rx="6" fill="#f59e0b" fill-opacity="0.2" />
+          <text x="730" y="28" fill="#fcd34d" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Terbuka</text>
+        </g>
+
+        <!-- Row 3 -->
+        <g transform="translate(0, 168)">
+          <line x1="20" y1="46" x2="785" y2="46" stroke="#334155" stroke-width="0.8" />
+          <text x="24" y="28" fill="#60a5fa" font-family="monospace" font-size="13" font-weight="600">#TK-8085</text>
+          <text x="120" y="28" fill="#f8fafc" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Pembaruan Lisensi & Instalasi Software Dev</text>
+          <text x="390" y="28" fill="#cbd5e1" font-family="'Segoe UI', system-ui, sans-serif" font-size="12">Tim Engineering</text>
+          <!-- Priority Chip: Normal -->
+          <rect x="545" y="12" width="62" height="24" rx="6" fill="#3b82f6" fill-opacity="0.2" />
+          <text x="576" y="28" fill="#93c5fd" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Normal</text>
+          <!-- Status Chip: Closed -->
+          <rect x="685" y="12" width="90" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+          <text x="730" y="28" fill="#34d399" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Selesai</text>
+        </g>
+
+        <!-- Row 4 -->
+        <g transform="translate(0, 226)">
+          <text x="24" y="28" fill="#60a5fa" font-family="monospace" font-size="13" font-weight="600">#TK-8081</text>
+          <text x="120" y="28" fill="#f8fafc" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="500">Troubleshoot Printer Server & Scanner Shared</text>
+          <text x="390" y="28" fill="#cbd5e1" font-family="'Segoe UI', system-ui, sans-serif" font-size="12">Divisi Umum</text>
+          <!-- Priority Chip: Normal -->
+          <rect x="545" y="12" width="62" height="24" rx="6" fill="#3b82f6" fill-opacity="0.2" />
+          <text x="576" y="28" fill="#93c5fd" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Normal</text>
+          <!-- Status Chip: Closed -->
+          <rect x="685" y="12" width="90" height="24" rx="6" fill="#10b981" fill-opacity="0.2" />
+          <text x="730" y="28" fill="#34d399" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Selesai</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

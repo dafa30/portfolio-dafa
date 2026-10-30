@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-tiket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f" />
+      <stop offset="100%" stop-color="#112240" />
+    </linearGradient>
+    <linearGradient id="teal-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="shadow-tiket" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bg-tiket)" />
+
+  <!-- App Window Container -->
+  <g filter="url(#shadow-tiket)" transform="translate(60, 45)">
+    <rect width="1080" height="660" rx="16" fill="#0d1b33" stroke="#233554" stroke-width="1.5" />
+
+    <!-- Titlebar -->
+    <rect width="1080" height="48" rx="16" fill="#142645" />
+    <rect y="36" width="1080" height="12" fill="#142645" />
+    <circle cx="28" cy="24" r="6" fill="#ef4444" />
+    <circle cx="48" cy="24" r="6" fill="#f59e0b" />
+    <circle cx="68" cy="24" r="6" fill="#10b981" />
+    <text x="540" y="30" fill="#8892b0" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Sistem Informasi Tiket &amp; Destinasi Wisata</text>
+
+    <!-- Top Navigation Header -->
+    <g transform="translate(0, 48)">
+      <rect width="1080" height="56" fill="#10223f" />
+      <line x1="0" y1="56" x2="1080" y2="56" stroke="#233554" stroke-width="1" />
+
+      <!-- Logo -->
+      <g transform="translate(30, 12)">
+        <rect width="32" height="32" rx="8" fill="#06b6d4" />
+        <path d="M10 14h12l-6 10z" fill="#ffffff" />
+        <text x="44" y="22" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">GoExplore</text>
+      </g>
+
+      <!-- Nav Links -->
+      <g transform="translate(420, 20)">
+        <text x="0" y="16" fill="#06b6d4" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Destinasi</text>
+        <text x="100" y="16" fill="#8892b0" font-family="'Segoe UI', sans-serif" font-size="13">Wahana &amp; Paket</text>
+        <text x="240" y="16" fill="#8892b0" font-family="'Segoe UI', sans-serif" font-size="13">Cek Status Tiket</text>
+        <text x="380" y="16" fill="#8892b0" font-family="'Segoe UI', sans-serif" font-size="13">Bantuan</text>
+      </g>
+    </g>
+
+    <!-- Main Content Grid -->
+    <g transform="translate(30, 120)">
+      <!-- Left Column: Destination Card -->
+      <g>
+        <rect width="640" height="500" rx="14" fill="#142645" stroke="#233554" stroke-width="1" />
+
+        <!-- Destination Banner / Preview -->
+        <rect x="18" y="18" width="604" height="200" rx="10" fill="#1b3056" />
+        <!-- Graphic mountains/landscape representation -->
+        <path d="M18 190 L160 80 L310 200 L440 110 L622 218 L18 218 Z" fill="#0c4a6e" fill-opacity="0.6" />
+        <path d="M120 218 L280 120 L400 218 Z" fill="#0284c7" fill-opacity="0.4" />
+        <circle cx="500" cy="80" r="32" fill="#f59e0b" fill-opacity="0.3" />
+        <circle cx="500" cy="80" r="18" fill="#fcd34d" />
+        <!-- Overlay text -->
+        <rect x="36" y="36" width="110" height="26" rx="6" fill="#0f172a" fill-opacity="0.7" />
+        <text x="91" y="53" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" text-anchor="middle">TAMAN WISATA ALAM</text>
+        <text x="36" y="150" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="800">Ecopark Highland &amp; Safari</text>
+        <text x="36" y="174" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="13">Buka Setiap Hari: 08.00 – 17.30 WIB • Jawa Barat</text>
+
+        <!-- Destination Details -->
+        <g transform="translate(20, 235)">
+          <text x="0" y="20" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">Pilihan Kategori Tiket &amp; Wahana</text>
+
+          <!-- Ticket option 1 -->
+          <g transform="translate(0, 36)">
+            <rect width="600" height="64" rx="8" fill="#1a2d52" stroke="#2a4170" stroke-width="1" />
+            <text x="20" y="28" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="600">Tiket Masuk Reguler (Dewasa)</text>
+            <text x="20" y="46" fill="#8892b0" font-family="'Segoe UI', sans-serif" font-size="11">Akses seluruh area safari, taman burung, dan danau</text>
+            <text x="440" y="38" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">Rp 45.000</text>
+            <!-- Counter -->
+            <rect x="525" y="18" width="55" height="28" rx="6" fill="#0f1f3a" />
+            <text x="552" y="37" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600" text-anchor="middle">2</text>
+          </g>
+
+          <!-- Ticket option 2 -->
+          <g transform="translate(0, 112)">
+            <rect width="600" height="64" rx="8" fill="#1a2d52" stroke="#2a4170" stroke-width="1" />
+            <text x="20" y="28" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="600">Tiket Terusan Anak (+ Wahana Air)</text>
+            <text x="20" y="46" fill="#8892b0" font-family="'Segoe UI', sans-serif" font-size="11">Akses safari + playground anak + waterpark</text>
+            <text x="440" y="38" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="700">Rp 35.000</text>
+            <rect x="525" y="18" width="55" height="28" rx="6" fill="#0f1f3a" />
+            <text x="552" y="37" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600" text-anchor="middle">1</text>
+          </g>
+
+          <!-- Ticket option 3 -->
+          <g transform="translate(0, 188)">
+            <rect width="600" height="50" rx="8" fill="#172644" />
+            <circle cx="28" cy="25" r="10" fill="#10b981" fill-opacity="0.2" />
+            <path d="M24 25l3 3 5-5" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" />
+            <text x="48" y="30" fill="#e2e8f0" font-family="'Segoe UI', sans-serif" font-size="12">Kuota Kunjungan Tersedia: <tspan fill="#34d399" font-weight="700">640 / 1.000 Pengunjung Hari Ini</tspan></text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Right Column: Booking Summary & E-Ticket Mockup -->
+      <g transform="translate(660, 0)">
+        <rect width="360" height="500" rx="14" fill="#142645" stroke="#233554" stroke-width="1" />
+
+        <!-- Header -->
+        <text x="24" y="36" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="700">Ringkasan Pemesanan</text>
+        <line x1="20" y1="52" x2="340" y2="52" stroke="#233554" stroke-width="1" />
+
+        <!-- Visit Date Picked -->
+        <g transform="translate(24, 70)">
+          <text x="0" y="14" fill="#8892b0" font-family="'Segoe UI', sans-serif" font-size="11">TANGGAL RENCANA KUNJUNGAN</text>
+          <text x="0" y="36" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">Sabtu, 14 November 2026</text>
+        </g>
+
+        <!-- Calculation list -->
+        <g transform="translate(24, 130)">
+          <text x="0" y="16" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="12">2x Tiket Reguler Dewasa</text>
+          <text x="310" y="16" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" text-anchor="end">Rp 90.000</text>
+
+          <text x="0" y="44" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="12">1x Tiket Terusan Anak</text>
+          <text x="310" y="44" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" text-anchor="end">Rp 35.000</text>
+
+          <line x1="0" y1="64" x2="310" y2="64" stroke="#233554" stroke-width="1" stroke-dasharray="4 4" />
+
+          <text x="0" y="92" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="700">Total Biaya Tiket</text>
+          <text x="310" y="92" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="800" text-anchor="end">Rp 125.000</text>
+        </g>
+
+        <!-- QR Code Ticket Badge -->
+        <g transform="translate(24, 255)">
+          <rect width="312" height="150" rx="10" fill="#0b172a" stroke="#1e3458" stroke-width="1" />
+          <!-- QR Mock -->
+          <rect x="18" y="20" width="80" height="80" rx="6" fill="#ffffff" />
+          <rect x="26" y="28" width="22" height="22" fill="#000000" />
+          <rect x="30" y="32" width="14" height="14" fill="#ffffff" />
+          <rect x="68" y="28" width="22" height="22" fill="#000000" />
+          <rect x="26" y="70" width="22" height="22" fill="#000000" />
+          <rect x="54" y="56" width="12" height="12" fill="#000000" />
+          <rect x="74" y="70" width="16" height="16" fill="#000000" />
+
+          <!-- E-Ticket details -->
+          <text x="115" y="38" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="10">KODE BOOKING TIKET</text>
+          <text x="115" y="56" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="700">TIK-ECO-8894</text>
+          <text x="115" y="80" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11">Status: Siap Ditunjukkan di Loket</text>
+          <rect x="18" y="112" width="276" height="24" rx="4" fill="#1e293b" />
+          <text x="156" y="128" fill="#34d399" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" text-anchor="middle">Validasi Langsung via Barcode Scanner Loket</text>
+        </g>
+
+        <!-- Simulated Submit Button -->
+        <g transform="translate(24, 430)">
+          <rect width="312" height="44" rx="8" fill="url(#teal-accent)" />
+          <text x="156" y="27" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Simpan &amp; Unduh E-Ticket (PDF)</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
