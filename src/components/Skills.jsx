@@ -45,7 +45,7 @@ export default function Skills() {
   const { t } = useLanguage();
 
   return (
-    <section id="keahlian" className="section section-tint">
+    <section id="keahlian" className="section">
       <div className="container">
         <SectionTitle>{t("skills.title")}</SectionTitle>
 

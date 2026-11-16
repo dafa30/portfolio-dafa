@@ -1,9 +1,35 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import IDCard from "./IDCard";
 import { profile } from "../data";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const ease = [0.22, 1, 0.36, 1];
+
+// Mengetik, jeda, menghapus, lalu mengulang
+function useTypewriter(text) {
+  const reduce = useReducedMotion();
+  const [n, setN] = useState(reduce ? text.length : 0);
+
+  useEffect(() => {
+    if (reduce) { setN(text.length); return; }
+    let i = 0;
+    let dir = 1;
+    let timer;
+    const tick = () => {
+      i += dir;
+      setN(i);
+      let delay = dir === 1 ? 110 : 55;
+      if (dir === 1 && i === text.length) { dir = -1; delay = 1800; }
+      else if (dir === -1 && i === 0) { dir = 1; delay = 600; }
+      timer = setTimeout(tick, delay);
+    };
+    timer = setTimeout(tick, 1200);
+    return () => clearTimeout(timer);
+  }, [text, reduce]);
+
+  return text.slice(0, n);
+}
 
 const word = {
   hidden: { y: "112%" },
@@ -44,6 +70,7 @@ function LinkedInIcon() {
 export default function Hero() {
   const words = profile.name.split(" ");
   const { t } = useLanguage();
+  const typed = useTypewriter(profile.role);
 
   const socialLinks = [
     {
@@ -103,15 +130,12 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          <motion.p className="hero-role" {...fade(0.7)}>
-            {profile.role}
+          <motion.p className="hero-role" aria-label={profile.role} {...fade(0.7)}>
+            <span aria-hidden="true">{typed}</span>
+            <span className="hero-caret" aria-hidden="true" />
           </motion.p>
           <motion.p className="hero-tagline" {...fade(0.85)}>
             {t("hero.tagline")}
-          </motion.p>
-
-          <motion.p className="hero-loc" {...fade(1.0)}>
-            {profile.location}
           </motion.p>
         </div>
 

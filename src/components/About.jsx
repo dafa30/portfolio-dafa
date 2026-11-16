@@ -1,15 +1,41 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import SectionTitle from "./SectionTitle";
 import { profile } from "../data";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const ease = [0.22, 1, 0.36, 1];
 
+// Teks menyala kata demi kata mengikuti scroll
+function ScrollWord({ children, progress, range }) {
+  const opacity = useTransform(progress, range, [0.22, 1]);
+  return <motion.span style={{ opacity }}>{children}</motion.span>;
+}
+
+function ScrollReveal({ text }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.85", "end 0.5"] });
+  const words = text.split(" ");
+  return (
+    <p className="about-desc" ref={ref} aria-label={text}>
+      {words.map((w, i) => {
+        const start = i / words.length;
+        const end = start + 1 / words.length;
+        return (
+          <span key={i} aria-hidden="true">
+            <ScrollWord progress={scrollYProgress} range={[start, end]}>{w}</ScrollWord>{" "}
+          </span>
+        );
+      })}
+    </p>
+  );
+}
+
 export default function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="tentang" className="section">
+    <section id="tentang" className="section section-tint">
       <div className="container">
         <SectionTitle>{t("about.title")}</SectionTitle>
 
@@ -43,9 +69,7 @@ export default function About() {
             <h3 className="about-name">{profile.name}</h3>
             <p className="about-role">{profile.role}</p>
 
-            <p className="about-desc">
-              {t("about.summary")}
-            </p>
+            <ScrollReveal text={t("about.summary")} />
 
             {/* Tombol aksi: dipindahkan dari Beranda */}
             <div className="about-cta">

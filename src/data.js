@@ -4,7 +4,7 @@
 export const profile = {
   name: "Dafa Adi Raharjo",
   firstName: "Dafa",
-  role: "Full-Stack Web Developer",
+  role: "Web Developer",
   degree: "S.Kom.",
   email: "dafaadi2002@gmail.com",
   phone: "+62 813-8447-6814",
